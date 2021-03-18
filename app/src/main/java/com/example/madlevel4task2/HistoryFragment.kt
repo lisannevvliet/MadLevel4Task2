@@ -67,9 +67,9 @@ class HistoryFragment : Fragment() {
                 }
                 true
             }
-            // Navigate to the GameFragment upon a click on the AppBar back arrow.
+            // Navigate to the GameFragment upon a click on the AppBar back arrow and clear the back stack.
             android.R.id.home -> {
-                findNavController().navigate(R.id.action_historyFragment_to_gameFragment)
+                findNavController().popBackStack()
                 true
             }
             else -> super.onOptionsItemSelected(item)
